@@ -1,3 +1,7 @@
 # MeLi-Challange-2019
 
 Para correr todo el archivo .ipynb hay que modificar los archivos run.py, evaluation.py y gru4rec_pytorch.py que se obtienen del repositorio de gru4rec, que están contenidos en la carpeta src
+
+
+## Contenido de Jupyter notebook
+Primero importamos los datos correspondientes a las tres bases de datos y los transformamos en dataframes. Luego creamos las funciones para calcular las metricas, estas se obtienen de documentación del MeLi challenge o de clases. En tercer lugar creamos los metodos random y most popular para recomendar, y se aplican obtienen las métricas según las recomendaciones creadas, esto puede demorar un poco, como 10 minutos aproximadamente. Luego se calcula algunas metricas para el GRU4Rec, sin embargo después se crean nuevos archivos para modificar el GRU4Rec. No se cambia la funcionalidad ya establecida sino que se agrega la función ndcg para poder calcularlo directamente, y también la creación del archivo con las recomendaciones realizadas por este método. Cabe destacar que para poder hacer esto se trabajo con los dataframes según la bibliografía que aparece en el archivo que contiene el código, así se crea el metadata por ejemplo. Finalmente, con las recomendaiones del GRU4Rec, también se crea el metodo para el SBERT. De esta manera creamos el modelo hybrido que genera las recomendaciones según el alpha y se entrega los resultados al final.
